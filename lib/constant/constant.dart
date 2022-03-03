@@ -1,4 +1,4 @@
 String HOME_SCREEN = '/HomeScreen',
-    IMAGE_SPLASH = '/ImageSplashScreen',
+    SIGNUP_SCREEN = '/SignupScreen',
     VIDEO_SPALSH = '/VideoSplashScreen',
     ANIMATED_SPALSH = '/AnimatedSplashScreen';

@@ -8,10 +8,10 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({Key key}) : super(key: key);
 
   @override
-  SplashScreenState createState() => SplashScreenState();
+  _SplashScreen createState() => _SplashScreen();
 }
 
-class SplashScreenState extends State<SplashScreen>
+class _SplashScreen extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   var _visible = true;
 

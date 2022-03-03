@@ -1,12 +1,21 @@
 import 'dart:async';
 
 import 'package:star_app_admin/constant/constant.dart';
+import 'package:star_app_admin/screen/signup_screen.dart';
 import 'package:star_app_admin/screen/splash_screen.dart';
 import 'package:star_app_admin/screen/home_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+  //     overlays: [SystemUiOverlay.bottom]);
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+  ));
   runApp(const MyApp());
 }
 
@@ -34,6 +43,7 @@ class MyApp extends StatelessWidget {
       home: const SplashScreen(),
       routes: <String, WidgetBuilder>{
         HOME_SCREEN: (BuildContext context) => const HomeScreen(),
+        SIGNUP_SCREEN: (BuildContext context) => const SignupScreen(),
         // VIDEO_SPALSH: (BuildContext context) => new VideoSplashScreen(),
         // IMAGE_SPLASH: (BuildContext context) => new ImageSplashScreen(),
         // ANIMATED_SPALSH: (BuildContext context) => new AnimatedSplashScreen()
