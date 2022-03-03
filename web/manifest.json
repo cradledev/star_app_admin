@@ -1,6 +1,6 @@
 {
-    "name": "start_app_admin",
-    "short_name": "start_app_admin",
+    "name": "star_app_admin",
+    "short_name": "star_app_admin",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

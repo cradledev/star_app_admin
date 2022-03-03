@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.start_app_admin">
+    package="com.example.star_app_admin">
    <application
-        android:label="start_app_admin"
+        android:label="star_app_admin"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

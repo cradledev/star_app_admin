@@ -1,4 +1,4 @@
-package com.example.start_app_admin
+package com.example.star_app_admin
 
 import io.flutter.embedding.android.FlutterActivity
 

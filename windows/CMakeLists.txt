@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(start_app_admin LANGUAGES CXX)
+project(star_app_admin LANGUAGES CXX)
 
-set(BINARY_NAME "start_app_admin")
+set(BINARY_NAME "star_app_admin")
 
 cmake_policy(SET CMP0063 NEW)
 

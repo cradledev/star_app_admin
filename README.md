@@ -1,4 +1,4 @@
-# start_app_admin
+# star_app_admin
 
 A new Flutter project.
 
