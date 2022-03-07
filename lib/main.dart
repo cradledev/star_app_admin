@@ -1,12 +1,18 @@
-import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 import 'package:star_app_admin/constant/constant.dart';
 import 'package:star_app_admin/screen/signup_screen.dart';
 import 'package:star_app_admin/screen/splash_screen.dart';
 import 'package:star_app_admin/screen/home_screen.dart';
+import 'package:star_app_admin/screen/dashboard_screen.dart';
+import 'package:star_app_admin/screen/quiz/create_quiz_screen.dart';
+import 'package:star_app_admin/screen/quiz/transformation_screen.dart';
+import 'package:star_app_admin/screen/quiz/transformation_question_screen.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:star_app_admin/provider/index.dart';
+import 'package:star_app_admin/provider/navigation_provider.dart';
 
 void main() {
   // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
@@ -16,7 +22,15 @@ void main() {
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
   ));
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider.value(value: AppState()),
+      ChangeNotifierProvider(
+        create: (_) => NavigationProvider(),
+      ),
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -44,6 +58,11 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         HOME_SCREEN: (BuildContext context) => const HomeScreen(),
         SIGNUP_SCREEN: (BuildContext context) => const SignupScreen(),
+        DASHBORAD_SCREEN: (BuildContext context) => const DashboardScreen(),
+        CREATE_QUIZ_SCREEN: (BuildContext context) => const CreateQuizScreen(),
+        TRANSFORMATION: (BuildContext context) => const TranformationScreen(),
+        TRANSFORMATIONQUESTION: (BuildContext context) =>
+            const TransformationQuestionScreen(),
         // VIDEO_SPALSH: (BuildContext context) => new VideoSplashScreen(),
         // IMAGE_SPLASH: (BuildContext context) => new ImageSplashScreen(),
         // ANIMATED_SPALSH: (BuildContext context) => new AnimatedSplashScreen()

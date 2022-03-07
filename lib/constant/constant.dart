@@ -1,4 +1,11 @@
-String HOME_SCREEN = '/HomeScreen',
+import 'dart:ffi';
+
+import 'package:flutter/material.dart';
+
+const HOME_SCREEN = '/HomeScreen',
     SIGNUP_SCREEN = '/SignupScreen',
-    VIDEO_SPALSH = '/VideoSplashScreen',
-    ANIMATED_SPALSH = '/AnimatedSplashScreen';
+    CREATE_QUIZ_SCREEN = '/createQuizScreen',
+    TRANSFORMATION = '/createQuizScreen/transformation',
+    TRANSFORMATIONQUESTION = '/createQuizScreen/transformationQuestioin',
+    DASHBORAD_SCREEN = '/DashboardScreen';
+const Color appMainColor = Color(0xff0A103F);
